@@ -1,0 +1,1 @@
+<h2>correct project structure on Flask</h2>

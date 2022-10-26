@@ -1,13 +1,15 @@
-from flask import Flask
-from sqlalchemy.testing.plugin.plugin_base import logging
+import os
 
+import logging
+
+from flask import Flask
 
 import config
 from api import api
 from models import db
 
-logging.basicConfig(level=logging.DEBUG,
-                    format='[%(asctime)s]: {} %(levelname)s %(message)s'.format(os.getpid()),
+
+logging.basicConfig(level=logging.DEBUG, format='[%(asctime)s]: {} %(levelname)s %(message)s'.format(os.getpid()),
                     datefmt='%Y-%m-%d %H:%M:%S',
                     handlers=[logging.StreamHandler()])
 
